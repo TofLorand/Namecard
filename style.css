@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: 20px;
+    min-width: 400px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 20px;
+}
+
+main {
+    padding: 0 10px;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url(assets/bgimage.jpg) no-repeat center center fixed;
+    background-size: cover;
+    justify-content: space-between;
+    font-family: cursive;
+    flex-direction: column;
+    min-width: fit-content;
+    min-height: fit-content;
+
+}
+
+.name-card {
+    background-color: rgba(255, 255, 255, 0.6);
+    display: flex;
+    height: 600px;
+    width: 400px;
+    min-width: 300px;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom-right-radius: 60px;
+    border-top-left-radius: 60px;
+    box-shadow: 20px 20px 50px 10px black;
+}
+
+.name-headline {
+    display: flex;
+    height: 35rem;
+    width: 20rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    line-height: 1.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+    padding: 10px;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+.profile-photo {
+    width: 8rem;
+    border-radius: 50%;
+    box-shadow: 0px 3px 8px black;
+    border: 1px solid black;
+    transition: all 0.5s ease-in-out;
+}
+
+.profile-photo:hover {
+    transform: scale(1.3);
+}
+
+.links {
+    width: 20rem;
+    height: 15rem;
+    text-align: center;
+    line-height: 1.3em;
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-evenly;
+}
+
+.pivot-point {
+    width: 20rem;
+    height: 8rem;
+    position: relative;
+    transition: all 1s linear;
+    transform-style: preserve-3d;
+}
+
+.hiden-text,
+.reply-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.hiden-text {
+    z-index: 2;
+    backface-visibility: hidden;
+}
+
+.reply-text {
+    z-index: 1;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+
+.text-container:hover .pivot-point {
+    transform: rotateY(180deg);
+}
+
+.text-container {
+    perspective: 1000px;
+}
+
+ul,
+li {
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+    transition: all 0.5s ease-in-out;
+}
+
+.soc-media {
+    width: 60px;
+}
+
+.soc-media:hover {
+    transform: scale(1.3);
+}
+
+hr {
+    border: 1px solid grey;
+    width: 50%;
+}
